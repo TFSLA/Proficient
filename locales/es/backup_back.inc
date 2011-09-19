@@ -1,0 +1,22 @@
+##
+## DO NOT MODIFY THIS FILE BY HAND!
+##
+"Export"=>"Exportar",
+"Backup database"=>"Copia de Respaldo de la Base de Datos",
+"Extra options"=>"Opciones adicionales",
+"Add 'DROP TABLE' to output-script"=>"Agregar 'DROP TABLE' al script de salida",
+"Save as"=>"Guardar como",
+"Download backup"=>"Descargar copia de respaldo",
+"Table structure and data"=>"Estructura de tablas y datos",
+"Only table strucure"=>"Solo estructura de tablas",
+"Only data"=>"Solo datos",
+"Compressed .ZIP file"=>"Archivo comprimido .ZIP",
+"Plain text file"=>"Archivo de texto plano",
+"Backup generation may take a while"=>"La generación de la copia de respaldo puede tomar un tiempo",
+"The estimated process time is"=>"El tiempo estimado para el proceso es",
+"minutes"=>"minutos",
+"Do you really want to create generate a DB Backup?"=>"¿Realmente desea generar la copia de respaldo?",
+"Please be patient"=>"Por favor, tenga paciencia",
+"Do NOT reload this page until the backup is done"=>"NO recargue la página hasta que la copia haya finalizado",
+"Download Files Backup"=>"Descargar copia de respaldo",
+"File Repository"=>"Repositorio de archivos",

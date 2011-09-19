@@ -1,0 +1,20 @@
+##
+## DO NOT MODIFY THIS FILE BY HAND!
+##
+"Add Department",
+"Department Company",
+"Department Name",
+"Department Parent",
+"Edit Department",
+"badCompany"=>"This company is invalid. You cannot add a department.",
+"delDept"=>"Are you sure you want to delete this department",
+"deptIndexPage"=>"Please access departments via a company",
+"deptValidName"=>"Please enter a valid Department name",
+"deptWithProject"=>"You cannot delete a department that has projects associated with it",
+"deptWithSub"=>"You cannot delete a department that has sub-departments",
+"deptWithUsers"=>"You cannot delete a department that has users associated with it",
+"edit this department",
+"view this department",
+"delDept"=>"Delete this department?",
+"delArea"=>"Delete this functional area?",
+"NoUsers"=>"This department does´n have any human resource associate",

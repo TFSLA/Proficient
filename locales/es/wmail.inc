@@ -1,0 +1,42 @@
+##
+## DO NOT MODIFY THIS FILE BY HAND!
+##
+"Welcome to webmail"=>"Bienvenido a Webmail",
+"User ID"=>"Nombre de usuario",
+"Password"=>"Contraseña",
+"Identities"=>"Identidades",
+"Options"=>"Opciones",
+"Compose"=>"Redactar",
+"Inbox"=>"Bandeja de entrada",
+"Bookmarks"=>"Favoritos",
+"Subject"=>"Título",
+"Priority"=>"Prioridad",
+"Read receipt"=>"Confirmar lectura",
+"Return receipt"=>"Confirmar recepción",
+"Low"=>"Baja",
+"Normal"=>"Normal",
+"High"=>"Alta",
+
+"wmailValidName"=>"Por favor, ingrese un nombre válido",
+"wmailValidEmail"=>"Por favor, ingrese un email válido",
+
+"Send FAILED"=>"El Envío FALLO",
+"Message successfully sent"=>"Mensaje enviado satisfactoriamente",
+"Error:  Make sure the 'file_uploads' directive is enabled (set to 'On' or '1') in your php.ini file"=>"Error: Asegúrese de que la opción file_uploads esté activada (establezca a 'On' o '1') en su archivo php.ini",
+"Invalid uploads dir"=>"Directorio de subidas inválido",
+"failed"=>"falló",
+"Bypassing anti-spam"=>"Ejecutando anti-spam",
+"Error when saving fwd att to"=>"Error al guardar el adjunto reenviado a",
+"Temp file could not be opened"=>"El archivo temporal no pudo ser abierto",
+"SMTP connection failed"=>"Conexión SMTP falló",
+"Couldn't open temp file for reading"=>"No se pudo abrir el archivo temporal para lectura",
+"Couldn't save"=>"No se pudo guardar",
+"Flagging failed:"=>"Señalamiento falló:",
+"conversion failed"=>"conversión falló",
+
+"Information"=>"Información",
+"wmailEmptySubject"=>"El asunto del mensaje está vacío. ¿Esta seguro que desea enviar el mensaje sin asunto?",
+"wmailNonUploadedFile"=>"Su archivo adjunto está siendo cargado, por favor, no interrumpa este proceso.",
+
+"errConnection"=>"No se puede establecer la conexion con el servidor de correo. Por favor revise el nombre del servidor de correo entrante en los datos de su usuario, y en caso de ser correctos contacte al administrador del sistema. La causa de no conexion es: '%s'",
+"Add all"=>"Agregar todos",

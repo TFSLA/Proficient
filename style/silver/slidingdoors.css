@@ -1,0 +1,41 @@
+.slidetabsmenu{
+float:left;
+width:100%;
+font-size: 12px;
+}
+
+.slidetabsmenu ul{
+list-style-type: none;
+margin:0;
+padding:0;
+}
+
+.slidetabsmenu li{
+display:inline;
+margin:0;
+padding:0;
+}
+
+.slidetabsmenu a.specialtab{
+float:left;
+background:url(../../style/silver/images/slide-left.gif) no-repeat left top;
+margin:0;
+margin-right: 0px;
+padding:0 0 0 9px;
+text-Decoration:none;
+}
+
+.slidetabsmenu a.specialtab font{
+float:left;
+display:block;
+background:url(../../style/silver/images/slide-right.gif) no-repeat right top;
+padding:2px 13px 2px 4px;
+color:#333333;
+cursor:pointer;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px;
+}
+
+.slidetabsmenu a.specialtab:hover font{
+	color:#FF9900;
+}
