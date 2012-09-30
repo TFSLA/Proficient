@@ -608,12 +608,22 @@
 	# we use variable variables in order to achieve this
 	function print_enum_string_option_list( $p_enum_name, $p_val=0 ) {
 		$g_var = 'g_'.$p_enum_name.'_enum_string';
-		global $$g_var;  
+                $hidden_var = $g_var . '_hidden';
+		global $$g_var, $$hidden_var;
 
-		$t_arr  = explode_enum_string( $$g_var );
+		$t_arr = explode_enum_string( $$g_var );
+		$hidden_arr = isset($$hidden_var) ? explode_enum_string( $$hidden_var ) : array();
+                
 		$enum_count = count( $t_arr );
+		$hidden_count = count( $hidden_arr );
 		for ($i=0;$i<$enum_count;$i++) {
+                        $is_hidden = false;
 			$t_elem  = explode_enum_arr( $t_arr[$i] );
+                        for($j=0;$j<$hidden_count;$j++){
+                            if($t_elem[0] == $hidden_arr[$j])
+                                $is_hidden = true;
+                        }
+                        if($is_hidden) continue;
 			$t_elem2 = get_enum_element( $p_enum_name, $t_elem[0] );
 			echo "<option value=\"$t_elem[0]\"";
 			check_selected( $t_elem[0], $p_val );
@@ -933,11 +943,15 @@
 	# --------------------
 	# print the bracketed links used near the top
 	# if the $p_link is blank then the text is printed but no link is created
-	function print_bracket_link( $p_link, $p_url_text ) {
+	function print_bracket_link( $p_link, $p_url_text, $target=null ) {
 		if (is_blank( $p_link )) {
 			PRINT "[&nbsp;$p_url_text&nbsp;]";
 		} else {
-			PRINT "[&nbsp;<a href=\"$p_link\">$p_url_text</a>&nbsp;]";
+                        $target_link = '';
+                        if($target) {
+                            $target_link = "target='$target'";
+                        }
+			PRINT "[&nbsp;<a href=\"$p_link\" $target_link>$p_url_text</a>&nbsp;]";
 		}
 	}
 	# --------------------

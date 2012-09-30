@@ -178,6 +178,10 @@
 */
 	}
 
+        function html_get_css() {
+            echo '<link rel="stylesheet" type="text/css" href="style/default/main.css" />';
+        }
+        
 	# --------------------
 	# (6) Print an HTML meta tag to redirect to another page
 	# This function is optional and may be called by pages that need a redirect.
@@ -946,9 +950,10 @@ $titleBlock->show();
 		html_button_bug_delete( $p_bug_id );
 		echo '</td>';
 
-		echo '<td>';
-		html_button_print($p_bug_id);
-		echo '</td>';
+                //NN change request - 20120929
+		//echo '<td>';
+		//html_button_print($p_bug_id);
+		//echo '</td>';
 
 		# PUBLISH button
 

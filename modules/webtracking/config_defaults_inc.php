@@ -841,7 +841,9 @@ global $AppUI;
 	$g_view_state_enum_string			= '10:public,50:private';
 
 	$g_priority_enum_string				= '10:none,20:low,30:normal,40:high,50:urgent,60:immediate';
-	$g_severity_enum_string				= '10:feature,20:trivial,30:text,40:tweak,50:minor,60:major,70:crash,80:block';
+        //NN change request - 20120929
+	$g_severity_enum_string_hidden			= '30,40,70,80';
+        $g_severity_enum_string				= '10:feature,20:trivial,30:text,40:tweak,50:minor,60:major,70:crash,80:block,90:any';
 	$g_reproducibility_enum_string		= '10:always,30:sometimes,50:random,70:have not tried,90:unable to duplicate,100:N/A';
 	$g_status_enum_string				= '10:new,20:feedback,30:acknowledged,40:confirmed,50:assigned,80:resolved,90:closed';
 	$g_resolution_enum_string			= '10:open,20:fixed,24:tested,30:reopened,40:unable to duplicate,50:not fixable,60:duplicate,70:not a bug,80:suspended,90:wont fix';

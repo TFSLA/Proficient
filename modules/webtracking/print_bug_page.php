@@ -48,6 +48,7 @@
 ?>
 <?php html_page_top1() ?>
 <?php
+        html_get_css();
 	html_head_end();
 	html_body_begin();
 ?>
@@ -56,15 +57,20 @@
 <table class="width100" cellspacing="1">
 <tr>
 	<td class="form-title" colspan="6">
-		<div class="center"><?php echo config_get( 'window_title' ) . ' - ' . project_get_name( $v_project_id ) ?></div>
+		<div class="center">
+                    <?php echo config_get( 'window_title' ) . ' - ' . project_get_name( $v_project_id ) ?>
+                    <span class="small">
+                        <a href="#" onclick="this.style.display='none';window.print();this.style.display='inline';">
+                            &nbsp;-&nbsp;
+                            <?php echo lang_get( 'print' ); ?>
+                        </a>
+                    </span>
+                </div>
 	</td>
 </tr>
 <tr>
 	<td class="form-title" colspan="3">
 		<?php echo lang_get( 'viewing_bug_advanced_details_title' ) ?>
-	</td>
-	<td class="right" colspan="3">
-		<span class="small"><?php print_bracket_link( 'index.php?m=webtracking&a=bug_view_page&bug_id='.$f_bug_id, lang_get( 'go_back' ) ) ?></span>
 	</td>
 </tr>
 <tr>

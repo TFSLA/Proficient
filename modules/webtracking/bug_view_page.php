@@ -68,7 +68,7 @@
 		<span class="small"><?php print_bracket_link( 'index.php?m=webtracking&a=bug_view_page&bug_id=' . $f_bug_id . '&amp;history=1#history', lang_get( 'bug_history' ) ) ?></span>
 
 		<!-- Print Bug -->
-		<span class="small"><?php print_bracket_link( 'index.php?m=webtracking&a=print_bug_page&bug_id=' . $f_bug_id, lang_get( 'print' ) ) ?></span>
+		<span class="small"><?php print_bracket_link( 'index.php?m=webtracking&a=print_bug_page&suppressHeaders=true&bug_id=' . $f_bug_id, lang_get( 'print' ), 'blank' ) ?></span>
 
 	         <?php
 	              // Links Prev / Next

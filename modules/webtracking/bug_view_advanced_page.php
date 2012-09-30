@@ -212,17 +212,17 @@
 	<td class="category">
 		<?php echo lang_get( 'resolution' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 		<?php echo get_enum_element( 'resolution', $t_bug->resolution ) ?>
 	</td>
 
 	<!-- Platform -->
-	<td class="category">
+	<!--<td class="category">
 		<?php echo lang_get( 'platform' ) ?>
 	</td>
 	<td>
 		<?php echo $t_bug->platform ?>
-	</td>
+	</td>-->
 
 </tr>
 
@@ -241,17 +241,17 @@
 	<td class="category">
 		<?php echo lang_get( 'duplicate_id' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 		<?php print_duplicate_id( $t_bug->duplicate_id ) ?>
 	</td>
 
 	<!-- Operating System -->
-	<td class="category">
+	<!--<td class="category">
 		<?php echo lang_get( 'os' ) ?>
 	</td>
 	<td>
 		<?php echo $t_bug->os ?>
-	</td>
+	</td>-->
 
 </tr>
 
@@ -267,15 +267,15 @@
 	</td>
 
 	<!-- spacer -->
-	<td colspan="2">&nbsp;</td>
+	<td colspan="5">&nbsp;</td>
 
 	<!-- OS Version -->
-	<td class="category">
+	<!--<td class="category">
 		<?php echo lang_get( 'os_version' ) ?>
 	</td>
 	<td>
 		<?php echo $t_bug->os_build ?>
-	</td>
+	</td>-->
 
 </tr>
 
@@ -295,7 +295,7 @@
 	<td class="category">
 		<?php echo lang_get( 'date_deadline' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 		<?php
 		if (strlen($t_bug->date_deadline)>0 && $t_bug->date_deadline>0)
 			print_date( config_get( 'short_date_format' ), $t_bug->date_deadline );
@@ -305,31 +305,14 @@
 	</td>
 
 	<!-- Product Version -->
-	<td class="category">
+	<!--<td class="category">
 		<?php echo lang_get( 'product_version' ) ?>
 	</td>
 	<td>
 		<?php echo $t_bug->version ?>
-	</td>
+	</td>-->
 
 </tr>
-
-
-<tr <?php echo helper_alternate_class() ?>>
-
-	<!-- spacer -->
-	<td colspan="4">&nbsp;</td>
-
-	<!-- Product Build -->
-	<td class="category">
-		<?php echo lang_get( 'product_build' ) ?>
-	</td>
-	<td>
-		<?php echo $t_bug->build?>
-	</td>
-
-</tr>
-
 
 <!-- spacer -->
 <tr height="5" class="spacer">

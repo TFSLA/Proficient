@@ -165,13 +165,13 @@ function changeFormReport(pAction){
 
 
 <!-- spacer -->
-<tr>
+<tr style="display:none">
 	<td class="spacer" colspan="2">&nbsp;</td>
 </tr>
 
 
 <!-- Profile -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'select_profile' ) ?>
 	</td>
@@ -184,7 +184,7 @@ function changeFormReport(pAction){
 
 
 <!-- instructions -->
-<tr>
+<tr style="display:none">
 	<td colspan="2">
 		<?php echo lang_get( 'or_fill_in' ) ?>
 	</td>
@@ -192,7 +192,7 @@ function changeFormReport(pAction){
 
 
 <!-- Platform -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'platform' ) ?>
 	</td>
@@ -203,7 +203,7 @@ function changeFormReport(pAction){
 
 
 <!-- Operating System -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'os' ) ?>
 	</td>
@@ -214,7 +214,7 @@ function changeFormReport(pAction){
 
 
 <!-- OS Version -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'os_version' ) ?>
 	</td>
@@ -225,13 +225,13 @@ function changeFormReport(pAction){
 
 
 <!-- spacer -->
-<tr>
+<tr style="display:none">
 	<td class="spacer" colspan="2">&nbsp;</td>
 </tr>
 
 
 <!-- Product Version -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'product_version' ) ?>
 	</td>
@@ -244,7 +244,7 @@ function changeFormReport(pAction){
 
 
 <!-- Product Build -->
-<tr <?php echo helper_alternate_class() ?>>
+<tr <?php echo helper_alternate_class() ?> style="display:none">
 	<td class="category">
 		<?php echo lang_get( 'product_build' ) ?>
 	</td>
