@@ -290,9 +290,9 @@ global $AppUI;
 
 	# --- advanced views --------------
 	# BOTH, SIMPLE_ONLY, ADVANCED_ONLY
-	$g_show_report			= BOTH;
-	$g_show_update			= BOTH;
-	$g_show_view			= BOTH;
+	$g_show_report			= ADVANCED_ONLY;
+	$g_show_update			= ADVANCED_ONLY;
+	$g_show_view			= ADVANCED_ONLY;
 
 	# --- footer menu -----------------
 	# Display another instance of the menu at the bottom.  The top menu will still remain.

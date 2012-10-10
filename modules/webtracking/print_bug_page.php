@@ -142,91 +142,49 @@
 	<td class="print-category">
 		<?php echo lang_get( 'reporter' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php print_user_with_subject( $v_reporter_id, $f_bug_id ) ?>
 	</td>
-	<td class="print-category">
-		<?php echo lang_get( 'platform' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo $v_platform ?>
-	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
 	<td class="print-category">
 		<?php echo lang_get( 'assigned_to' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php print_user_with_subject( $v_handler_id, $f_bug_id ) ?>
 	</td>
-	<td class="print-category">
-		<?php echo lang_get( 'os' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo $v_os ?>
-	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
 	<td class="print-category">
 		<?php echo lang_get( 'priority' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php echo get_enum_element( 'priority', $v_priority ) ?>
 	</td>
-	<td class="print-category">
-		<?php echo lang_get( 'os_version' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo $v_os_build ?>
-	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
 	<td class="print-category">
 		<?php echo lang_get( 'status' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php echo get_enum_element( 'status', $v_status ) ?>
 	</td>
-	<td class="print-category">
-		<?php echo lang_get( 'product_version' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo $v_version ?>
-	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
-	<td class="print-category">
-		<?php echo lang_get( 'product_build' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo $v_build?>
-	</td>
 	<td class="print-category">
 		<?php echo lang_get( 'resolution' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php echo get_enum_element( 'resolution', $v_resolution ) ?>
 	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
 	<td class="print-category">
-		<?php echo lang_get( 'projection' ) ?>:
-	</td>
-	<td class="print">
-		<?php echo get_enum_element( 'projection', $v_projection ) ?>
-	</td>
-	<td class="print-category">
 		<?php echo lang_get( 'duplicate_id' ) ?>:
 	</td>
-	<td class="print">
+	<td class="print" colspan="5">
 		<?php print_duplicate_id( $v_duplicate_id ) ?>
 	</td>
-	<td class="print" colspan="2">&nbsp;</td>
 </tr>
 <tr class="print">
 	<td class="print-category">
