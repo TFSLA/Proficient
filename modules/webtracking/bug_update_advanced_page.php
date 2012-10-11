@@ -233,15 +233,15 @@ function setCalendar( idate, fdate ) {
 	<td class="category">
 		<?php echo lang_get( 'resolution' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 		<?php echo get_enum_element( 'resolution', $t_bug->resolution ) ?>
 	</td>
 
 	<!-- Platform -->
-	<td class="category">
+	<td class="category" style="display: none">
 		<?php echo lang_get( 'platform' ) ?>
 	</td>
-	<td>
+	<td style="display: none">
 		<input type="text" class="text" name="platform" size="16" maxlength="32" value="<?php echo $t_bug->platform ?>" />
 	</td>
 
@@ -264,22 +264,22 @@ function setCalendar( idate, fdate ) {
 	<td class="category">
 		<?php echo lang_get( 'duplicate_id' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 		<?php echo $t_bug->duplicate_id ?>
 	</td>
 
 	<!-- Operating System -->
-	<td class="category">
+	<td class="category" style="display: none">
 		<?php echo lang_get( 'os' ) ?>
 	</td>
-	<td>
+	<td style="display: none">
 		<input type="text" class="text" name="os" size="16" maxlength="32" value="<?php echo $t_bug->os ?>" />
 	</td>
 
 </tr>
 
 
-<tr <?php echo helper_alternate_class() ?>>
+<tr style="display: none">
 
 	<!-- Projection -->
 	<td class="category">
@@ -321,7 +321,7 @@ function setCalendar( idate, fdate ) {
 	<td class="category">
 		<?php echo lang_get( 'date_deadline' ) ?>
 	</td>
-	<td>
+	<td colspan="3">
 	<?php  
 	$df = $AppUI->getPref('SHDATEFORMAT');
 
@@ -339,10 +339,10 @@ function setCalendar( idate, fdate ) {
 	</td>	
 
 	<!-- Product Version -->
-	<td class="category">
+	<td class="category" style="display: none">
 		<?php echo lang_get( 'product_version' ) ?>
 	</td>
-	<td>
+	<td style="display: none">
 		<select class="text" name="version">
 			<?php print_version_option_list( $t_bug->version, $t_bug->project_id ) ?>
 		</select>
@@ -351,7 +351,7 @@ function setCalendar( idate, fdate ) {
 </tr>
 
 
-<tr <?php echo helper_alternate_class() ?>>
+<tr style="display: none">
 
 	<!-- spacer -->
 	<td colspan="4">&nbsp;</td>
