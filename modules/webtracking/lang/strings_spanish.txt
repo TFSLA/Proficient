@@ -426,7 +426,7 @@ $s_view_state_enum_string         = '10:public,50:private';
 
 $s_priority_enum_string           = '10:ninguna,20:baja,30:normal,40:alta,50:urgente,60:inmediata';
 
-$s_severity_enum_string           = '10:funcionalidad,20:trivial,30:texto,40:cambio mínimo,50:menor,60:mayor,70:interrupción súbita,80:bloqueo';
+$s_severity_enum_string           = '10:funcionalidad,20:trivial,30:texto,40:cambio mínimo,50:menor,60:mayor,70:interrupción súbita,80:bloqueo,90:cualquiera';
 
 $s_reproducibility_enum_string    = '10:siempre,30:a veces,50:aleatorio,70:no he intentado,90:no es posible duplicar,100:no se sabe';
 
