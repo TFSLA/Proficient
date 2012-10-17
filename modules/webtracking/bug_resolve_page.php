@@ -160,6 +160,6 @@ function validateResolve(){
 			include( 'bugnote_view_inc.php' )?>
 
 <? # Incluyo Box de base de conocimientos
-	include($t_mantis_dir.'bug_kb_view.inc.php'); ?>
+	//include($t_mantis_dir.'bug_kb_view.inc.php'); ?>
 
 <?php html_page_bottom1( __FILE__ ) ?>

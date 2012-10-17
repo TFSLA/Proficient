@@ -190,6 +190,39 @@
 
 </tr>
 
+<tr <?php echo helper_alternate_class() ?>>
+
+	<!-- ETA -->
+	<td class="category">
+		<?php echo lang_get( 'eta' ) ?>
+	</td>
+	<td>
+		<!--<?php echo get_enum_element( 'eta', $t_bug->eta ) ?>-->
+		<?php echo $t_bug->eta ?>
+	</td>
+
+	<!-- View Status -->
+	<td class="category">
+		<?php echo lang_get( 'date_deadline' ) ?>
+	</td>
+	<td colspan="3">
+		<?php
+		if (strlen($t_bug->date_deadline)>0 && $t_bug->date_deadline>0)
+			print_date( config_get( 'short_date_format' ), $t_bug->date_deadline );
+		else
+			echo "";
+		?>
+	</td>
+
+	<!-- Product Version -->
+	<!--<td class="category">
+		<?php echo lang_get( 'product_version' ) ?>
+	</td>
+	<td>
+		<?php echo $t_bug->version ?>
+	</td>-->
+
+</tr>
 
 <!-- spacer -->
 <tr height="5" class="spacer">
@@ -218,6 +251,15 @@
 	</td>
 </tr>
 
+<!-- Steps to Reproduce -->
+<tr <?php echo helper_alternate_class() ?>>
+	<td class="category">
+		<?php echo lang_get( 'steps_to_reproduce' ) ?>
+	</td>
+	<td colspan="5">
+		<?php echo $t_bug->steps_to_reproduce ?>
+	</td>
+</tr>
 
 <!-- Additional Information -->
 <tr <?php echo helper_alternate_class() ?>>
@@ -229,6 +271,69 @@
 	</td>
 </tr>
 
+
+<!-- spacer -->
+<tr height="5" class="spacer">
+	<td colspan="6"></td>
+</tr>
+
+
+<!-- Custom Fields -->
+<?php
+	$t_custom_fields_found = false;
+	$t_related_custom_field_ids = custom_field_get_linked_ids( $t_bug->project_id );
+	foreach( $t_related_custom_field_ids as $t_id ) {
+		if ( !custom_field_has_read_access( $t_id, $f_bug_id ) ) {
+			continue;
+		} # has read access
+
+		$t_custom_fields_found = true;
+		$t_def = custom_field_get_definition( $t_id );
+?>
+	<tr <?php echo helper_alternate_class() ?>>
+		<td class="category">
+			<?php echo lang_get_defaulted( $t_def['name'] ) ?>
+		</td>
+		<td colspan="5">
+		<?php
+			$t_custom_field_value = custom_field_get_value( $t_id, $f_bug_id );
+			if( CUSTOM_FIELD_TYPE_EMAIL == $t_def['type'] ) {
+				echo "<a href=\"mailto:$t_custom_field_value\">$t_custom_field_value</a>";
+			} else {
+				echo $t_custom_field_value;
+			}
+		?>
+		</td>
+	</tr>
+<?php
+	} # foreach
+?>
+
+<?php if ( $t_custom_fields_found ) { ?>
+<!-- spacer -->
+<tr height="5" class="spacer">
+	<td colspan="6"></td>
+</tr>
+<?php } # custom fields found ?>
+
+<!-- Attachments -->
+<?php
+	$t_show_attachments = ( $t_bug->reporter_id == auth_get_current_user_id() ) || access_has_bug_level( config_get( 'view_attachments_threshold' ), $f_bug_id );
+
+	if ( $t_show_attachments ) {
+?>
+<tr <?php echo helper_alternate_class() ?>>
+	<td class="category">
+		<a name="attachments" id="attachments" />
+		<?php echo lang_get( 'attached_files' ) ?>
+	</td>
+	<td colspan="5">
+		<?php file_list_attachments ( $f_bug_id ); ?>
+	</td>
+</tr>
+<?php
+	}
+?>
 
 <SCRIPT LANGUAGE="JavaScript">
 //<!-- Begin
